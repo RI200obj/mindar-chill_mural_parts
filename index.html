@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>test-ri200-mind</title>
+      <title>mindar-chill_mural_parts</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="apple-mobile-web-app-capable" content="yes">
@@ -11,11 +11,10 @@
       <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
       <script src="gesture-detector.js"></script>
       <script src="gesture-handler.js"></script>
-      <script src="play-on-click.js"></script>
     </head>
     <body>
       <a-scene 
-        mindar-image="imageTargetSrc: ri200-3.mind; filterMinCF:0.0001; filterBeta: 1" 
+        mindar-image="imageTargetSrc: mindar-chill_mural_parts.mind; filterMinCF:0.0001; filterBeta: 1" 
         color-space="sRGB" 
         renderer="colorManagement: true, physicallyCorrectLights" 
         vr-mode-ui="enabled: false" 
@@ -26,7 +25,6 @@
       >
         <a-assets>
           <a-asset-item id="1s2s" src="1s2s.gltf"></a-asset-item>
-          <video id="video" autoplay loop="true" src="video.mp4"></video>
           <img id="ri" src="ri.png"></video>
           <a-asset-item id="griffles" src="griffles.gltf"></a-asset-item>
         </a-assets>
@@ -47,17 +45,13 @@
         </a-entity>
 
         <a-entity mindar-image-target="targetIndex: 1">
-          <a-video 
-            src="#video" 
-            webkit-playsinline 
-            playsinline 
+          <a-image 
+            src="#ri" 
             width="1" 
-            height="2" 
+            height="1" 
             position="0 2 0"
-            play-on-click
           >
-          </a-video>
-          <a-image src="#ri" width="1" height="1"></a-image>
+          </a-image>
         </a-entity>
 
         <a-entity mindar-image-target="targetIndex: 2">
